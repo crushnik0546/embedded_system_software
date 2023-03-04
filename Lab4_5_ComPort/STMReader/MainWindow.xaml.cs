@@ -35,19 +35,19 @@ namespace STMReader
                         Logic.PotentiometrBuffer.RemoveAt(0);
                     }
 
-                    //if (Logic.LightBuffer.Count > 0)
-                    //{
-                    //    var val = Logic.LightBuffer[0];
-                    //    Dispatcher.BeginInvoke(new Action(() =>
-                    //    {
-                    //        Logic.LightValues.Add(new ObservableValue(val));
-                    //        if (Logic.LightValues.Count > 100)
-                    //        {
-                    //            Logic.LightValues.RemoveAt(0);
-                    //        }
-                    //    }));
-                    //    Logic.LightBuffer.RemoveAt(0);
-                    //}                                       
+                    if (Logic.LightBuffer.Count > 0)
+                    {
+                        var val = Logic.LightBuffer[0];
+                        Dispatcher.BeginInvoke(new Action(() =>
+                        {
+                            Logic.LightValues.Add(new ObservableValue(val));
+                            if (Logic.LightValues.Count > 100)
+                            {
+                                Logic.LightValues.RemoveAt(0);
+                            }
+                        }));
+                        Logic.LightBuffer.RemoveAt(0);
+                    }                                       
                 }
             });
         }

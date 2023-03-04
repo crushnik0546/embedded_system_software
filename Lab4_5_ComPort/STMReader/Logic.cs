@@ -58,20 +58,20 @@ namespace STMReader
 
                         if (value.EndsWith(';'))
                         {
-                            //var index = value.IndexOf(',');
+                            var index = value.IndexOf(',');
                             var end = value.IndexOf(';');
 
-                            potentiometrValue = float.Parse(value.Substring(0, end - 1), CultureInfo.InvariantCulture);
-                            //lightValue = int.Parse(value.Substring(index+1, end - index - 1), CultureInfo.InvariantCulture);
+                            potentiometrValue = float.Parse(value.Substring(0, index), CultureInfo.InvariantCulture);
+                            lightValue = int.Parse(value.Substring(index+1, end - index - 1), CultureInfo.InvariantCulture);
 
-                            if (potentiometrValue <= 100f)
+                            if (potentiometrValue <= 3.3f && potentiometrValue >= 0.0f)
                             {
                                 PotentiometrBuffer.Add(potentiometrValue);
                             }
-                            //if (lightValue <= 100 && lightValue >= 0)
-                            //{
-                            //    LightBuffer.Add(lightValue);
-                            //}
+                            if (lightValue <= 100 && lightValue >= 0)
+                            {
+                                LightBuffer.Add(lightValue);
+                            }
                         }
                     }
                     catch (Exception ex)
