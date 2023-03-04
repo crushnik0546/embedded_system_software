@@ -8,6 +8,7 @@ User button toggles green led
 
 ## Snake (2nd lab)
 Snake on leds. User can set different speeds for snake by pressing buttons. Also the speed value is showed on 7-segment display.
+
 ![snake](https://github.com/crushnik0546/embedded_system_software/blob/main/results/snake.gif)
 
 ## Stopwatch (3rd lab)
