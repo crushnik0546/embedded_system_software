@@ -14,5 +14,9 @@ Snake on leds. User can set different speeds for snake by pressing buttons. Also
 ![Stopwatch](https://github.com/crushnik0546/embedded_system_software/blob/main/results/stopwatch.gif)
 
 ## Сommunication via com port
+**Shield:**
+
+![image](https://user-images.githubusercontent.com/62956808/222922988-25698011-ae7d-429c-bc7d-c20f4eeb471c.png)
+
 Microcontroller -> desktop programs: STM32 gets data from lightning sensor and from potentiometer and sends it to desktop programm which displays charts with these values in real time.
 Desktop program -> microcontroller: user can turn on/off blue and red leds and set RGB values to RGB led on shield.
