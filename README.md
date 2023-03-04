@@ -1,4 +1,4 @@
-# embedded_system_software-
+# embedded_system_software
 Laboratory works for embedded system software 
 
 All projects are for [STM32F103RB](https://www.st.com/en/microcontrollers-microprocessors/stm32f103rb.html)
